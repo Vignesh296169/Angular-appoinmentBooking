@@ -16,11 +16,10 @@
 <div>
   <div
     *ngFor="let appoinments of appoinment; index as i"
-    class="flex space-x-4 w-full justify-center"
+    class="flex space-x-4 w-full justify-center items-center space-y-2"
   >
-    <p>{{ appoinments.id }}</p>
-    <p>{{ appoinments.name }}</p>
-    <p>{{ appoinments.date }}</p>
+    <p class="mt-2">{{ appoinments.name }}</p>
+    <p>{{ appoinments.date | date : "dd.MM.YYYY" }}</p>
     <button
       (click)="deleteFunction(i)"
       class="p-2 rounded-md bg-black text-white"
